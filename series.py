@@ -31,7 +31,9 @@ def LetterToNum(letter):
 def StringToSum(Str):
     '''
     returns sum of all letters based on given series
-    like for ABCD
+    like 42 for ABCD 1+4+11+26
+    29132 for KLHM
+    203 for DEF
     '''
     sum=0
     for l in Str:
@@ -40,6 +42,14 @@ def StringToSum(Str):
     return sum  
 
 def ShortestStringOfNum(Num):
+    '''returns shotest string of a number like for
+    500 it returns GBA 274+247+4+1+1 GGBAA
+    GBA is shortest string of GGBAA
+    similarly few more test cases are as follows
+    for 2000 shortest string is IHGFEB
+    for 4444 its KGE
+    for 2132 its JEDCA.
+    '''
     ShortestStr=""
     TempLetter = LetterList[-1]
     while(1):
