@@ -1,4 +1,4 @@
-# Kaka
+# Kakaw
 Kaka is a config management tool for managing the server configs
 
 ## Architecture
