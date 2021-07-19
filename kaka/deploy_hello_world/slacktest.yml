@@ -1,0 +1,33 @@
+hosts: slackservers
+tasks:
+  - name: Install the apache2 package
+    apt:
+      name: apache2
+      action: install
+
+  - name: Install the php
+    apt:
+      name: php
+      action: install
+
+  - name: Install the libapache2-mod-php
+    apt:
+      name: libapache2-mod-php
+      action: install
+
+  - name: Copy the config file to server 
+    file: 
+      src: dir.conf
+      dest: /etc/apache2/mods-available/dir.conf
+      mode: 644
+   
+  - name: Copy the config file to server 
+    file: 
+      src: index.php
+      dest: /var/www/html/index.php
+      mode: 644
+
+  - name: Restart apache
+    systemd:
+      service: apache2
+      action: restart

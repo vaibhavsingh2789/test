@@ -1,0 +1,4 @@
+launchpadlib
+setuptools_rust
+paramiko
+PyYAML

@@ -1,0 +1,12 @@
+# Example
+# servergroup
+#   server1:  
+#     username: foo
+#     password: bar
+slackservers:
+  54.83.79.17:
+    username: root
+    password: HCZGY2VRRG6Y6SOXCJYAS3MO
+  3.80.115.58:
+    username: root
+    password: HCZGY2VRRG6Y6SOXCJYAS3MO

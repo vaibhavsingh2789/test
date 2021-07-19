@@ -1,0 +1,17 @@
+hosts: slackservers
+tasks:
+  - name: Install the apache2 package
+    apt:
+      name: apache2
+      action: install
+
+  - name: Copy the config file to server 
+    file: 
+      src: dummyfile
+      dest: /tmp/dummyfilec
+      mode: 644
+   
+  - name: Restart apache
+    systemd:
+      service: apache2
+      action: restart
